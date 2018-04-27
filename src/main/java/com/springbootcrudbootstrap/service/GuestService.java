@@ -1,17 +1,12 @@
 package com.springbootcrudbootstrap.service;
 
 import java.util.List;
-import java.util.Map;
 
-import javax.annotation.PostConstruct;
 import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
-import org.springframework.data.redis.core.HashOperations;
-import org.springframework.data.redis.core.RedisTemplate;
-import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
 import com.springbootcrudbootstrap.bean.GuestBean;
@@ -20,33 +15,14 @@ import com.springbootcrudbootstrap.model.Guest;
 
 @Service
 @Transactional
-@Repository
 public class GuestService {
 	
 	@Autowired
 	GuestDao guestDao;
 	
-	private static final String KEY = "Guest";
-	 
-	private RedisTemplate<String, Object> redisTemplate;
-    private HashOperations<String, Long, Guest> hashOperations;
-	
-	@Autowired
-	public GuestService(RedisTemplate<String, Object> redisTemplate) {
-		this.redisTemplate = redisTemplate;
-	}
- 
-	@PostConstruct
-	private void init() {
-		hashOperations = redisTemplate.opsForHash();
-	}
 	
 	public List<Guest> findAll() {
 		List<Guest> listGuest = (List<Guest>) guestDao.findAllByOrderByIdAsc();
-		Map<Long, Guest> listGuests = hashOperations.entries(KEY);
-		for(Guest guest:listGuests.values()){
-			listGuest.add(guest);
-		}
 		return listGuest;
 	}
 
