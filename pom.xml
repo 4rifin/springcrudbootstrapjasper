@@ -74,10 +74,10 @@
 		</dependency>
 		
 		<!-- Spring Data Redis -->
-		<dependency>
+		<!-- <dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-redis</artifactId>
-		</dependency>
+		</dependency> -->
 		
 		<!-- https://mvnrepository.com/artifact/org.springframework.session/spring-session-data-redis -->
 		<dependency>
@@ -85,10 +85,10 @@
 		    <artifactId>spring-session-data-redis</artifactId>
 		</dependency>
 		
-		<dependency>
+		<!-- <dependency>
 		    <groupId>redis.clients</groupId>
 		    <artifactId>jedis</artifactId>
-		</dependency>
+		</dependency> -->
 		
 		<!-- https://mvnrepository.com/artifact/net.sf.jasperreports/jasperreports -->
 		<dependency>
