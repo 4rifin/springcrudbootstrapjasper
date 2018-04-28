@@ -29,8 +29,9 @@
     
 </head>
 </html>
+</head>
 <footer>
-        <div class="footer-bottom">
+        <div class="row footer-bottom">
             <div class="page-footer">
                 <div class="page-footer-wrap">
                     <div class="side pull-left">
@@ -39,7 +40,7 @@
                 </div>
             </div>
         </div>
-  </footer>
+ </footer>       
  <script type="text/javascript" >
  function validationLogin(){
 		var exec = document.getElementById('login');
