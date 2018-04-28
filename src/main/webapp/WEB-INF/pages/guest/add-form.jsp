@@ -6,7 +6,7 @@
     
     
     <meta charset="UTF-8">
-    <title>Spring Login Bootstrap postgresql</title>
+    <title>Spring CRUD Bootstrap postgresql</title>
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
     <link href="<c:url value="/resources/css/bootstrap.min.css"/>" rel="stylesheet" type="text/css" />
     <link href="<c:url value="/resources/css/stylesheets.css"/>" rel="stylesheet" type="text/css" />
@@ -101,9 +101,9 @@
 					            </div>
 					        </div>
 			       </div>      
-			   </div>
-       <%@include file="/WEB-INF/pages/guest/mainFooter.jsp" %>
-  
+		<%@include file="/WEB-INF/pages/guest/mainFooter.jsp" %>
+ 	</div>
+       
   
  <script type="text/javascript" >
  function validationSubmit(){
